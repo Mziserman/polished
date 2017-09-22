@@ -4,14 +4,14 @@
   (factory((global.polished = global.polished || {})));
 }(this, (function (exports) { 'use strict';
 
-//      
+//
 
 // @private
 function capitalizeString(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-//      
+//
 var positionMap = ['Top', 'Right', 'Bottom', 'Left'];
 
 function generateProperty(property, position) {
@@ -78,7 +78,7 @@ function directionalProperty(property) {
   return generateStyles(property, valuesWithDefaults);
 }
 
-//      
+//
 
 /**
  * Check if a string ends with something
@@ -88,7 +88,7 @@ var endsWith = function (string, suffix) {
   return string.substr(-suffix.length) === suffix;
 };
 
-//      
+//
 
 /**
  * Strip the unit from a given CSS value, returning just the number. (or the original value if an invalid string was passed)
@@ -117,7 +117,7 @@ function stripUnit(value) {
   return unitlessValue;
 }
 
-//      
+//
 
 /**
  * Factory function that creates pixel-to-x converters
@@ -155,7 +155,7 @@ var pxtoFactory$1 = function pxtoFactory$1(to) {
   };
 };
 
-//      
+//
 /**
  * Convert pixel value to ems. The default base value is 16px, but can be changed by passing a
  * second argument to the function.
@@ -183,7 +183,7 @@ var pxtoFactory$1 = function pxtoFactory$1(to) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var em = /* #__PURE__*/pxtoFactory$1('em'); // eslint-disable-line spaced-comment
 
-//      
+//
 
 var ratioNames = {
   minorSecond: 1.067,
@@ -249,7 +249,7 @@ function modularScale(steps) {
   return realBase * Math.pow(realRatio, steps) + 'em';
 }
 
-//      
+//
 
 /**
  * Convert pixel value to rems. The default base value is 16px, but can be changed by passing a
@@ -442,7 +442,7 @@ var taggedTemplateLiteral = function (strings, raw) {
   }));
 };
 
-//      
+//
 
 /**
  * CSS to contain a float (credit to CSSMojo).
@@ -478,7 +478,7 @@ function clearFix() {
   });
 }
 
-//      
+//
 
 /**
  * CSS to represent truncated text with an ellipsis.
@@ -519,7 +519,7 @@ function ellipsis() {
   };
 }
 
-//      
+//
 
 /** */
 
@@ -614,7 +614,7 @@ function fontFace(_ref) {
   return JSON.parse(JSON.stringify(fontFaceDeclaration));
 }
 
-//      
+//
 
 /**
  * CSS to hide text to show a background image in a SEO-friendly way.
@@ -650,7 +650,7 @@ function hideText() {
   };
 }
 
-//      
+//
 
 /**
  * Generates a media query to target HiDPI devices.
@@ -690,7 +690,7 @@ function hiDPI() {
 var _opinionatedRules;
 var _unopinionatedRules;
 
-//      
+//
 var opinionatedRules = (_opinionatedRules = {
   html: {
     fontFamily: 'sans-serif'
@@ -857,10 +857,10 @@ function normalize(excludeOpinionated) {
   return mergeRules(unopinionatedRules, opinionatedRules);
 }
 
-//      
+//
 
 /**
- * CSS to style the selection psuedo-element.
+ * CSS to style the selection pseudo-element.
  *
  * @example
  * // Styles as object usage
@@ -901,7 +901,7 @@ function placeholder(styles) {
 
 var _templateObject = taggedTemplateLiteral(['radial-gradient(', '', '', '', ')'], ['radial-gradient(', '', '', '', ')']);
 
-//      
+//
 
 /** */
 
@@ -976,7 +976,7 @@ function radialGradient(_ref) {
   };
 }
 
-//      
+//
 
 /**
  * A helper to generate a retina background image and non-retina
@@ -1026,10 +1026,10 @@ function retinaImage(filename, backgroundSize) {
   });
 }
 
-//      
+//
 
 /**
- * CSS to style the selection psuedo-element.
+ * CSS to style the selection pseudo-element.
  *
  * @example
  * // Styles as object usage
@@ -1064,7 +1064,7 @@ function selection(styles) {
   return _ref = {}, defineProperty(_ref, parent + '::-moz-selection', _extends({}, styles)), defineProperty(_ref, parent + '::selection', _extends({}, styles)), _ref;
 }
 
-//      
+//
 
 /* eslint-disable key-spacing */
 var functionsMap = {
@@ -1124,7 +1124,7 @@ function timingFunctions(timingFunction) {
   return functionsMap[timingFunction];
 }
 
-//      
+//
 
 /** */
 
@@ -1203,7 +1203,7 @@ function triangle(_ref) {
   }, 'border' + reverseDirection[pointingDirection] + 'Color', foregroundColor + ' !important');
 }
 
-//      
+//
 
 /**
  * Provides an easy way to change the `wordWrap` property.
@@ -1239,7 +1239,7 @@ function wordWrap() {
   };
 }
 
-//      
+//
 
 
 function colorToInt(color) {
@@ -1294,7 +1294,7 @@ function hslToRgb(hue, saturation, lightness) {
   return convert(finalRed, finalGreen, finalBlue);
 }
 
-//      
+//
 var namedColorMap = {
   aliceblue: 'f0f8ff',
   antiquewhite: 'faebd7',
@@ -1456,7 +1456,7 @@ function nameToHex(color) {
   return namedColorMap[normalizedColorName] ? '#' + namedColorMap[normalizedColorName] : color;
 }
 
-//      
+//
 var hexRegex = /^#[a-fA-F0-9]{6}$/;
 var reducedHexRegex = /^#[a-fA-F0-9]{3}$/;
 var rgbRegex = /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/;
@@ -1541,7 +1541,7 @@ function parseToRgb(color) {
   throw new Error("Couldn't parse the color string. Please provide the color as a string in hex, rgb, rgba, hsl or hsla notation.");
 }
 
-//      
+//
 
 
 function rgbToHsl(color) {
@@ -1586,7 +1586,7 @@ function rgbToHsl(color) {
   return { hue: hue, saturation: saturation, lightness: lightness };
 }
 
-//      
+//
 
 /**
  * Returns an HslColor or HslaColor object. This utility function is only useful
@@ -1605,7 +1605,7 @@ function parseToHsl(color) {
   return rgbToHsl(parseToRgb(color));
 }
 
-//      
+//
 
 /**
  * Reduces hex values if possible e.g. #ff8866 to #f86
@@ -1618,13 +1618,13 @@ var reduceHexValue = function reduceHexValue(value) {
   return value;
 };
 
-//      
+//
 function numberToHex(value) {
   var hex = value.toString(16);
   return hex.length === 1 ? "0" + hex : hex;
 }
 
-//      
+//
 
 /**
  * Returns a string value for the color. The returned result is the smallest possible hex notation.
@@ -1659,7 +1659,7 @@ function rgb(value, green, blue) {
   throw new Error('Passed invalid arguments to rgb, please pass multiple numbers e.g. rgb(255, 205, 100) or an object e.g. rgb({ red: 255, green: 205, blue: 100 }).');
 }
 
-//      
+//
 
 /**
  * Returns a string value for the color. The returned result is the smallest possible rgba or hex notation.
@@ -1708,7 +1708,7 @@ function rgba(firstValue, secondValue, thirdValue, fourthValue) {
   throw new Error('Passed invalid arguments to rgba, please pass multiple numbers e.g. rgb(255, 205, 100, 0.75) or an object e.g. rgb({ red: 255, green: 205, blue: 100, alpha: 0.75 }).');
 }
 
-//      
+//
 function colorToHex(color) {
   return numberToHex(Math.round(color * 255));
 }
@@ -1721,7 +1721,7 @@ function hslToHex(hue, saturation, lightness) {
   return hslToRgb(hue, saturation, lightness, convertToHex);
 }
 
-//      
+//
 
 /**
  * Returns a string value for the color. The returned result is the smallest possible hex notation.
@@ -1756,7 +1756,7 @@ function hsl(value, saturation, lightness) {
   throw new Error('Passed invalid arguments to hsl, please pass multiple numbers e.g. hsl(360, 0.75, 0.4) or an object e.g. rgb({ hue: 255, saturation: 0.4, lightness: 0.75 }).');
 }
 
-//      
+//
 
 /**
  * Returns a string value for the color. The returned result is the smallest possible rgba or hex notation.
@@ -1794,7 +1794,7 @@ function hsla(value, saturation, lightness, alpha) {
   throw new Error('Passed invalid arguments to hsla, please pass multiple numbers e.g. hsl(360, 0.75, 0.4, 0.7) or an object e.g. rgb({ hue: 255, saturation: 0.4, lightness: 0.75, alpha: 0.7 }).');
 }
 
-//      
+//
 var isRgb = function isRgb(color) {
   return typeof color.red === 'number' && typeof color.green === 'number' && typeof color.blue === 'number' && (typeof color.alpha !== 'number' || typeof color.alpha === 'undefined');
 };
@@ -1854,7 +1854,7 @@ function toColorString(color) {
   throw new Error(errMsg);
 }
 
-//      
+//
 
 // Type definitions taken from https://github.com/gcanti/flow-static-land/blob/master/src/Fun.js
 
@@ -1881,7 +1881,7 @@ function curry(f) {
   return curried(f, f.length, []);
 }
 
-//      
+//
 
 /**
  * Changes the hue of the color. Hue is a number between 0 to 360. The first
@@ -1917,7 +1917,7 @@ function adjustHue(degree, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedAdjustHue = /*#__PURE__*/curry(adjustHue); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Returns the complement of the provided color. This is identical to adjustHue(180, <color>).
@@ -1948,13 +1948,13 @@ function complement(color) {
   }));
 }
 
-//      
+//
 
 function guard(lowerBoundary, upperBoundary, value) {
   return Math.max(lowerBoundary, Math.min(upperBoundary, value));
 }
 
-//      
+//
 
 /**
  * Returns a string value for the darkened color.
@@ -1989,7 +1989,7 @@ function darken(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedDarken = /*#__PURE__*/curry(darken); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Decreases the intensity of a color. Its range is between 0 to 1. The first
@@ -2025,7 +2025,7 @@ function desaturate(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedDesaturate = /*#__PURE__*/curry(desaturate); // eslint-disable-line spaced-comment
 
-//      
+//
 /**
  * Returns a number (float) representing the luminance of a color.
  *
@@ -2067,7 +2067,7 @@ function getLuminance(color) {
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 
-//      
+//
 
 /**
  * Converts the color to a grayscale, by reducing its saturation to 0.
@@ -2097,7 +2097,7 @@ function grayscale(color) {
   }));
 }
 
-//      
+//
 
 /**
  * Inverts the red, green and blue values of a color.
@@ -2132,7 +2132,7 @@ function invert(color) {
   }));
 }
 
-//      
+//
 
 /**
  * Returns a string value for the lightened color.
@@ -2167,7 +2167,7 @@ function lighten(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedLighten = /*#__PURE__*/curry(lighten); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Mixes two colors together by calculating the average of each of the RGB components.
@@ -2237,7 +2237,7 @@ function mix() {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedMix = /*#__PURE__*/curry(mix); // eslint-disable-line spaced-comment
 
-//      
+//
 /**
  * Increases the opacity of a color. Its range for the amount is between 0 to 1.
  *
@@ -2277,7 +2277,7 @@ function opacify(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedOpacify = /*#__PURE__*/curry(opacify); // eslint-disable-line spaced-comment
 
-//      
+//
 /**
  * Selects black or white for best contrast depending on the luminosity of the given color.
  * Follows W3C specs for readability at https://www.w3.org/TR/WCAG20-TECHS/G18.html
@@ -2313,7 +2313,7 @@ function readableColor(color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedReadableColor = /*#__PURE__*/curry(readableColor); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Increases the intensity of a color. Its range is between 0 to 1. The first
@@ -2350,7 +2350,7 @@ function saturate(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedSaturate = /*#__PURE__*/curry(saturate); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Sets the hue of a color to the provided value. The hue range can be
@@ -2384,7 +2384,7 @@ function setHue(hue, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedSetHue = /*#__PURE__*/curry(setHue); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Sets the lightness of a color to the provided value. The lightness range can be
@@ -2418,7 +2418,7 @@ function setLightness(lightness, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedSetLightness = /*#__PURE__*/curry(setLightness); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Sets the saturation of a color to the provided value. The lightness range can be
@@ -2452,7 +2452,7 @@ function setSaturation(saturation, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedSetSaturation = /*#__PURE__*/curry(setSaturation); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Shades a color by mixing it with black. `shade` can produce
@@ -2490,7 +2490,7 @@ function shade(percentage, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedShade = /*#__PURE__*/curry(shade); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /**
  * Tints a color by mixing it with white. `tint` can produce
@@ -2528,7 +2528,7 @@ function tint(percentage, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedTint = /*#__PURE__*/curry(tint); // eslint-disable-line spaced-comment
 
-//      
+//
 /**
  * Decreases the opacity of a color. Its range for the amount is between 0 to 1.
  *
@@ -2568,7 +2568,7 @@ function transparentize(amount, color) {
 // Don’t inline this variable into export because Rollup will remove the /*#__PURE__*/ comment
 var curriedTransparentize = /*#__PURE__*/curry(transparentize); // eslint-disable-line spaced-comment
 
-//      
+//
 
 /** */
 
@@ -2634,7 +2634,7 @@ function animation() {
   };
 }
 
-//      
+//
 
 /**
  * Shorthand that accepts any number of backgroundImage values as parameters for creating a single background statement.
@@ -2666,7 +2666,7 @@ function backgroundImages() {
   };
 }
 
-//      
+//
 
 /**
  * Shorthand that accepts any number of background values as parameters for creating a single background statement.
@@ -2697,7 +2697,7 @@ function backgrounds() {
   };
 }
 
-//      
+//
 /**
  * Shorthand that accepts up to four values, including null to skip a value, and maps them to their respective directions.
  * @example
@@ -2729,7 +2729,7 @@ function borderColor() {
   return directionalProperty.apply(undefined, ['borderColor'].concat(values));
 }
 
-//      
+//
 /**
  * Shorthand that accepts a value for side and a value for radius and applies the radius value to both corners of the side.
  * @example
@@ -2771,7 +2771,7 @@ function borderRadius(side, radius) {
   throw new Error('borderRadius expects one of "top", "bottom", "left" or "right" as the first argument.');
 }
 
-//      
+//
 /**
  * Shorthand that accepts up to four values, including null to skip a value, and maps them to their respective directions.
  * @example
@@ -2803,7 +2803,7 @@ function borderStyle() {
   return directionalProperty.apply(undefined, ['borderStyle'].concat(values));
 }
 
-//      
+//
 /**
  * Shorthand that accepts up to four values, including null to skip a value, and maps them to their respective directions.
  * @example
@@ -2834,7 +2834,7 @@ function borderWidth() {
   return directionalProperty.apply(undefined, ['borderWidth'].concat(values));
 }
 
-//      
+//
 
 
 function generateSelectors(template, state) {
@@ -2860,7 +2860,7 @@ function statefulSelectors(states, template, stateMap) {
   return selectors;
 }
 
-//      
+//
 var stateMap = [undefined, null, 'active', 'focus', 'hover'];
 
 function template(state) {
@@ -2902,7 +2902,7 @@ function buttons() {
   return statefulSelectors(states, template, stateMap);
 }
 
-//      
+//
 /**
  * Shorthand that accepts up to four values, including null to skip a value, and maps them to their respective directions.
  * @example
@@ -2934,7 +2934,7 @@ function margin() {
   return directionalProperty.apply(undefined, ['margin'].concat(values));
 }
 
-//      
+//
 /**
  * Shorthand that accepts up to four values, including null to skip a value, and maps them to their respective directions.
  * @example
@@ -2966,7 +2966,7 @@ function padding() {
   return directionalProperty.apply(undefined, ['padding'].concat(values));
 }
 
-//      
+//
 var positionMap$1 = ['absolute', 'fixed', 'relative', 'static', 'sticky'];
 
 /**
@@ -3027,7 +3027,7 @@ function position(positionKeyword) {
   }
 }
 
-//      
+//
 
 /**
  * Shorthand to set the height and width properties in a single statement.
@@ -3059,7 +3059,7 @@ function size(height) {
   };
 }
 
-//      
+//
 var stateMap$1 = [undefined, null, 'active', 'focus', 'hover'];
 
 function template$1(state) {
@@ -3113,7 +3113,7 @@ function textInputs() {
   return statefulSelectors(states, template$1, stateMap$1);
 }
 
-//      
+//
 
 /**
  * Shorthand that accepts any number of transition values as parameters for creating a single transition statement.
@@ -3145,7 +3145,7 @@ function transitions() {
   };
 }
 
-//      
+//
 // Helpers
 // Mixins
 // Color
